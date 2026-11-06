@@ -5,6 +5,7 @@ import Login from "./pages/auth/Login";
 import OwnerDashboard from "./pages/owner/OwnerDashboard";
 import CashierPOS from "./pages/cashier/CashierPOS";
 import PlatformDashboard from "./pages/platform-admin/PlatformDashboard";
+import Businesses from "./pages/platform-admin/Businesses";
 
 function App() {
   return (
@@ -22,6 +23,12 @@ function App() {
       <Route
         path="/platform-admin"
         element={<PlatformDashboard />}
+      />
+
+      {/* Platform Administrator - Businesses */}
+      <Route
+        path="/platform-admin/businesses"
+        element={<Businesses />}
       />
 
       {/* Default route */}
