@@ -1,0 +1,16 @@
+export function getSavedData(key, fallback) {
+  try {
+    const saved = localStorage.getItem(key);
+    return saved ? JSON.parse(saved) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+export function saveData(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+export function formatMoney(amount) {
+  return `KSh ${Number(amount || 0).toLocaleString("en-KE")}`;
+}
